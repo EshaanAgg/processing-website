@@ -1,0 +1,26 @@
+.root {
+  position: absolute;
+  right: var(--gutter);
+  height: 32px;
+  padding: 6px 12px;
+  padding-right: 70px;
+  font-size: var(--text-small);
+  font-weight: bold;
+  color: var(--darkgray);
+  cursor: pointer;
+  fill: var(--darkgray);
+
+  & svg {
+    height: 18px;
+    width: auto;
+    fill: var(--darkergrey);
+    & path {
+      fill: var(--darkergray);
+    }
+  }
+}
+
+.root:hover {
+  color: var(--darkergray);
+  fill: var(--darkergray);
+}
