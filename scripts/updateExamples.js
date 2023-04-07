@@ -3,6 +3,7 @@ const path = require('path');
 const glob = require('fast-glob');
 const inquirer = require('inquirer');
 const { exampleSlug } = require('../src/utils/paths');
+const updatePdezFiles = require('./updatePdezFiles');
 
 const from = path.join(__dirname, '..', '..', 'processing-examples');
 const to = path.join(__dirname, '..', 'content', 'examples');
@@ -103,6 +104,9 @@ const updateExamples = async () => {
     }
   }
 
+  // Create the .pdez files all the examples
+  await updatePdezFiles();
+
   console.log('Examples updated!');
 };
 
@@ -150,6 +154,6 @@ const diffExamples = (examples1, examples2) => {
 /**
   Checks whether the processing-contributions repo is next to this repo
 **/
-const examplesRepoExists = (keywords) => fs.existsSync(from);
+const examplesRepoExists = (_keywords) => fs.existsSync(from);
 
 updateExamples();

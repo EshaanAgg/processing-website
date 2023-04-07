@@ -76,6 +76,7 @@
   },
   "devDependencies": {
     "@designsystemsinternational/static": "^4.2.0",
+    "archiver": "^5.3.1",
     "fast-glob": "^3.2.7",
     "fs-extra": "^10.0.0",
     "gatsby-plugin-perf-budgets": "0.0.18",
