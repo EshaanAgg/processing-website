@@ -3,7 +3,7 @@ const path = require('path');
 const glob = require('fast-glob');
 const inquirer = require('inquirer');
 const { exampleSlug } = require('../src/utils/paths');
-const updatePdezFiles = require('./updatePdezFiles');
+const { updatePdezFiles } = require('./updatePdezFiles');
 
 const from = path.join(__dirname, '..', '..', 'processing-examples');
 const to = path.join(__dirname, '..', 'content', 'examples');
@@ -105,7 +105,7 @@ const updateExamples = async () => {
   }
 
   // Create the .pdez files all the examples
-  await updatePdezFiles();
+  await updatePdezFiles(portExamples);
 
   console.log('Examples updated!');
 };
